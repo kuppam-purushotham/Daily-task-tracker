@@ -1,217 +1,550 @@
-/* ------------------------------
-   BASIC SETTINGS
---------------------------------*/
+/* --------------------------------
+   BASIC
+-------------------------------- */
 
 * {
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b1020;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        #0b1020;
+
     color: white;
 }
 
 
-/* ------------------------------
+/* --------------------------------
    HEADER
---------------------------------*/
+-------------------------------- */
 
 header {
+
     text-align: center;
-    padding: 40px 20px;
+
+    padding:
+        45px 20px 30px;
 }
+
 
 header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-    color: #8b7cff;
+
+    margin: 0;
+
+    font-size: 48px;
+
+    color:
+        #8b7cff;
 }
+
 
 header p {
-    color: #a9b0c0;
+
+    margin-top: 10px;
+
+    color:
+        #a9b0c0;
+
+    font-size: 16px;
 }
 
 
-/* ------------------------------
+/* --------------------------------
    SECTIONS
---------------------------------*/
+-------------------------------- */
 
 section {
-    width: 90%;
-    max-width: 1000px;
-    margin: 25px auto;
-    padding: 25px;
 
-    background: #151b2e;
-    border: 1px solid #252d45;
-    border-radius: 18px;
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin:
+        25px auto;
+
+    padding:
+        25px;
+
+    background:
+        #151b2e;
+
+    border:
+        1px solid #252d45;
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.2);
 }
+
 
 section h2 {
+
     margin-top: 0;
-    color: #8b7cff;
+
+    color:
+        #8b7cff;
 }
 
 
-/* ------------------------------
+/* --------------------------------
    SUMMARY
---------------------------------*/
+-------------------------------- */
 
-section:nth-of-type(1) {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+.summary-container {
 
-section:nth-of-type(1) h2 {
-    width: 100%;
-}
+    display:
+        flex;
 
-section:nth-of-type(1) div {
-    flex: 1;
-    min-width: 200px;
-    padding: 20px;
+    gap:
+        15px;
 
-    background: #1c243a;
-    border-radius: 12px;
-}
-
-section:nth-of-type(1) h3 {
-    color: #9da6ba;
-}
-
-section:nth-of-type(1) p {
-    font-size: 24px;
-    font-weight: bold;
+    flex-wrap:
+        wrap;
 }
 
 
-/* ------------------------------
+.summary-card {
+
+    flex:
+        1;
+
+    min-width:
+        200px;
+
+    padding:
+        20px;
+
+    background:
+        #1c243a;
+
+    border-radius:
+        14px;
+}
+
+
+.summary-card h3 {
+
+    margin-top: 0;
+
+    color:
+        #9da6ba;
+
+    font-size:
+        14px;
+}
+
+
+.summary-card p {
+
+    font-size:
+        24px;
+
+    font-weight:
+        bold;
+
+    margin-bottom:
+        0;
+
+    color:
+        white;
+}
+
+
+/* --------------------------------
    TASK BUTTONS
---------------------------------*/
+-------------------------------- */
 
-section:nth-of-type(2) {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
+.task-container {
+
+    display:
+        flex;
+
+    gap:
+        12px;
+
+    flex-wrap:
+        wrap;
 }
 
-section:nth-of-type(2) h2 {
-    width: 100%;
-}
 
 button {
-    border: none;
-    padding: 13px 18px;
 
-    border-radius: 10px;
+    border:
+        none;
 
-    background: #242d47;
-    color: white;
+    padding:
+        13px 18px;
 
-    cursor: pointer;
+    border-radius:
+        10px;
 
-    font-size: 14px;
+    background:
+        #242d47;
 
-    transition: 0.2s;
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    font-size:
+        14px;
+
+    transition:
+        0.2s;
 }
+
 
 button:hover {
-    background: #6f5ce7;
-    transform: translateY(-2px);
+
+    background:
+        #6f5ce7;
+
+    transform:
+        translateY(-2px);
 }
 
 
-/* ------------------------------
+button:active {
+
+    transform:
+        scale(0.97);
+}
+
+
+/* --------------------------------
    TIMER
---------------------------------*/
+-------------------------------- */
+
+.timer-section {
+
+    text-align:
+        center;
+}
+
 
 #current-task {
-    color: #a9b0c0;
+
+    color:
+        #a9b0c0;
+
+    font-size:
+        18px;
 }
+
 
 #timer {
-    font-size: 48px;
-    font-weight: bold;
 
-    text-align: center;
+    font-size:
+        55px;
 
-    color: #8b7cff;
+    font-weight:
+        bold;
 
-    margin: 25px;
+    color:
+        #8b7cff;
+
+    margin:
+        25px;
 }
 
 
-/* ------------------------------
-   START / STOP
---------------------------------*/
+.stop-button {
 
-section:nth-of-type(3) button {
-    background: #6f5ce7;
-}
-
-section:nth-of-type(3) button:hover {
-    background: #8b7cff;
+    background:
+        #6f5ce7;
 }
 
 
-/* ------------------------------
+.stop-button:hover {
+
+    background:
+        #8b7cff;
+}
+
+
+/* --------------------------------
    CHART
---------------------------------*/
+-------------------------------- */
 
-#chart {
-    height: 300px;
+.chart-container {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:
+        flex;
 
-    color: #707a91;
+    align-items:
+        center;
 
-    border: 1px dashed #38425d;
-    border-radius: 15px;
+    justify-content:
+        center;
+
+    gap:
+        40px;
+
+    flex-wrap:
+        wrap;
 }
 
 
-/* ------------------------------
+#pie-chart {
+
+    width:
+        260px;
+
+    height:
+        260px;
+
+    border-radius:
+        50%;
+
+    background:
+        #242d47;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    position:
+        relative;
+}
+
+
+.chart-center {
+
+    width:
+        125px;
+
+    height:
+        125px;
+
+    border-radius:
+        50%;
+
+    background:
+        #151b2e;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-direction:
+        column;
+}
+
+
+.chart-center span {
+
+    font-size:
+        22px;
+
+    font-weight:
+        bold;
+}
+
+
+.chart-center small {
+
+    color:
+        #9da6ba;
+}
+
+
+#chart-legend {
+
+    min-width:
+        200px;
+}
+
+
+.legend-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    margin:
+        8px 0;
+
+    color:
+        #c8cedb;
+}
+
+
+.legend-dot {
+
+    width:
+        12px;
+
+    height:
+        12px;
+
+    border-radius:
+        50%;
+
+    display:
+        inline-block;
+}
+
+
+/* --------------------------------
    HISTORY
---------------------------------*/
+-------------------------------- */
 
-#history {
-    color: #a9b0c0;
+.history-item {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    padding:
+        15px;
+
+    margin-bottom:
+        10px;
+
+    background:
+        #1c243a;
+
+    border-radius:
+        12px;
 }
 
 
-/* ------------------------------
+.history-item strong {
+
+    color:
+        white;
+}
+
+
+.history-item p {
+
+    margin:
+        5px 0 0;
+
+    color:
+        #8f98ad;
+
+    font-size:
+        13px;
+}
+
+
+.empty-message {
+
+    color:
+        #707a91;
+
+    text-align:
+        center;
+
+    padding:
+        20px;
+}
+
+
+/* --------------------------------
    MOBILE
---------------------------------*/
+-------------------------------- */
 
 @media (max-width: 600px) {
 
     header h1 {
-        font-size: 32px;
+
+        font-size:
+            36px;
     }
+
 
     section {
-        width: 94%;
-        padding: 18px;
+
+        width:
+            94%;
+
+        padding:
+            18px;
     }
 
-    #timer {
-        font-size: 36px;
+
+    .summary-container {
+
+        flex-direction:
+            column;
     }
 
-    section:nth-of-type(1) {
-        flex-direction: column;
+
+    .summary-card {
+
+        width:
+            100%;
     }
 
-    section:nth-of-type(1) div {
-        width: 100%;
+
+    .task-container {
+
+        flex-direction:
+            column;
     }
+
 
     button {
-        width: 100%;
+
+        width:
+            100%;
     }
+
+
+    #timer {
+
+        font-size:
+            40px;
+    }
+
+
+    #pie-chart {
+
+        width:
+            220px;
+
+        height:
+            220px;
+    }
+
+
+    .history-item {
+
+        gap:
+            15px;
+    }
+
 }

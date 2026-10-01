@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -11,106 +12,202 @@
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='styles.css') }}">
+
 </head>
+
 
 <body>
 
-    <!-- Header -->
+    <!-- HEADER -->
+
     <header>
+
         <h1>LifeTrack</h1>
-        <p>Track your day. Understand your time.</p>
+
+        <p>
+            Track your day. Understand your time.
+        </p>
+
     </header>
 
 
-    <!-- Today's Summary -->
-    <section>
+    <!-- SUMMARY -->
+
+    <section class="summary-section">
 
         <h2>Today's Summary</h2>
 
-        <div>
-            <h3>Total Time</h3>
-            <p id="total-time">0 hours</p>
-        </div>
+        <div class="summary-container">
 
-        <div>
-            <h3>Most Time</h3>
-            <p id="highest-task">No data</p>
-        </div>
+            <div class="summary-card">
 
-        <div>
-            <h3>Least Time</h3>
-            <p id="lowest-task">No data</p>
+                <h3>Total Time</h3>
+
+                <p id="total-time">
+                    0h 0m
+                </p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <h3>Most Time</h3>
+
+                <p id="highest-task">
+                    No data
+                </p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <h3>Least Time</h3>
+
+                <p id="lowest-task">
+                    No data
+                </p>
+
+            </div>
+
         </div>
 
     </section>
 
 
-    <!-- Task Tracker -->
-    <section>
+    <!-- TASKS -->
+
+    <section class="task-section">
 
         <h2>What are you doing?</h2>
 
-        <button>🛁 Bathing</button>
+        <div class="task-container">
 
-        <button>👕 Getting Ready</button>
+            <button onclick="startTask('Bathing')">
+                🛁 Bathing
+            </button>
 
-        <button>🚌 Traveling</button>
+            <button onclick="startTask('Getting Ready')">
+                👕 Getting Ready
+            </button>
 
-        <button>💻 Working</button>
+            <button onclick="startTask('Traveling')">
+                🚌 Traveling
+            </button>
 
-        <button>📚 Studying</button>
+            <button onclick="startTask('Working')">
+                💻 Working
+            </button>
 
-        <button>😴 Resting</button>
+            <button onclick="startTask('Studying')">
+                📚 Studying
+            </button>
 
-        <button>🎮 Entertainment</button>
+            <button onclick="startTask('Resting')">
+                😴 Resting
+            </button>
 
-        <button>🍽️ Eating</button>
+            <button onclick="startTask('Entertainment')">
+                🎮 Entertainment
+            </button>
 
-        <button>🏃 Exercise</button>
+            <button onclick="startTask('Eating')">
+                🍽️ Eating
+            </button>
 
-        <button>✨ Other</button>
+            <button onclick="startTask('Exercise')">
+                🏃 Exercise
+            </button>
 
-    </section>
+            <button onclick="startTask('Other')">
+                ✨ Other
+            </button>
 
-
-    <!-- Timer -->
-    <section>
-
-        <h2>Current Activity</h2>
-
-        <p id="current-task">No activity</p>
-
-        <p id="timer">00:00:00</p>
-
-        <button>Start</button>
-
-        <button>Stop</button>
-
-    </section>
-
-
-    <!-- Chart -->
-    <section>
-
-        <h2>Daily Time Distribution</h2>
-
-        <div id="chart">
-            Pie chart will appear here
         </div>
 
     </section>
 
 
-    <!-- History -->
-    <section>
+    <!-- CURRENT ACTIVITY -->
+
+    <section class="timer-section">
+
+        <h2>Current Activity</h2>
+
+        <p id="current-task">
+            No activity
+        </p>
+
+        <div id="timer">
+            00:00:00
+        </div>
+
+        <button
+            class="stop-button"
+            onclick="stopTask()">
+
+            Stop Activity
+
+        </button>
+
+    </section>
+
+
+    <!-- CHART -->
+
+    <section class="chart-section">
+
+        <h2>Daily Time Distribution</h2>
+
+        <div class="chart-container">
+
+            <div id="pie-chart">
+
+                <div class="chart-center">
+
+                    <span id="chart-total">
+                        0h
+                    </span>
+
+                    <small>
+                        tracked
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div id="chart-legend">
+                No data yet.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HISTORY -->
+
+    <section class="history-section">
 
         <h2>Today's History</h2>
 
         <div id="history">
-            No activities recorded yet.
+
+            <p class="empty-message">
+                No activities recorded yet.
+            </p>
+
         </div>
 
     </section>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
 
 </html>
