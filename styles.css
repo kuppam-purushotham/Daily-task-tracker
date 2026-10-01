@@ -1,0 +1,217 @@
+/* ------------------------------
+   BASIC SETTINGS
+--------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: white;
+}
+
+
+/* ------------------------------
+   HEADER
+--------------------------------*/
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #8b7cff;
+}
+
+header p {
+    color: #a9b0c0;
+}
+
+
+/* ------------------------------
+   SECTIONS
+--------------------------------*/
+
+section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 25px;
+
+    background: #151b2e;
+    border: 1px solid #252d45;
+    border-radius: 18px;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #8b7cff;
+}
+
+
+/* ------------------------------
+   SUMMARY
+--------------------------------*/
+
+section:nth-of-type(1) {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+section:nth-of-type(1) h2 {
+    width: 100%;
+}
+
+section:nth-of-type(1) div {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+
+    background: #1c243a;
+    border-radius: 12px;
+}
+
+section:nth-of-type(1) h3 {
+    color: #9da6ba;
+}
+
+section:nth-of-type(1) p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* ------------------------------
+   TASK BUTTONS
+--------------------------------*/
+
+section:nth-of-type(2) {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+section:nth-of-type(2) h2 {
+    width: 100%;
+}
+
+button {
+    border: none;
+    padding: 13px 18px;
+
+    border-radius: 10px;
+
+    background: #242d47;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #6f5ce7;
+    transform: translateY(-2px);
+}
+
+
+/* ------------------------------
+   TIMER
+--------------------------------*/
+
+#current-task {
+    color: #a9b0c0;
+}
+
+#timer {
+    font-size: 48px;
+    font-weight: bold;
+
+    text-align: center;
+
+    color: #8b7cff;
+
+    margin: 25px;
+}
+
+
+/* ------------------------------
+   START / STOP
+--------------------------------*/
+
+section:nth-of-type(3) button {
+    background: #6f5ce7;
+}
+
+section:nth-of-type(3) button:hover {
+    background: #8b7cff;
+}
+
+
+/* ------------------------------
+   CHART
+--------------------------------*/
+
+#chart {
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #707a91;
+
+    border: 1px dashed #38425d;
+    border-radius: 15px;
+}
+
+
+/* ------------------------------
+   HISTORY
+--------------------------------*/
+
+#history {
+    color: #a9b0c0;
+}
+
+
+/* ------------------------------
+   MOBILE
+--------------------------------*/
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    section {
+        width: 94%;
+        padding: 18px;
+    }
+
+    #timer {
+        font-size: 36px;
+    }
+
+    section:nth-of-type(1) {
+        flex-direction: column;
+    }
+
+    section:nth-of-type(1) div {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
